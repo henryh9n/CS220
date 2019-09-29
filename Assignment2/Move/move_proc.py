@@ -57,8 +57,10 @@ class MoverProcess(Mover):
 
         pool = Pool(processes=cpu_count())
 
-        for i, _ in enumerate(pool.imap_unordered(self._move, files)):
+        for i, f in enumerate(files):
+            pool.apply_async(self._move, (f,))
             progress_bar(i, len(files), prefix="Moving files:")
+
         pool.close()
         pool.join()
 
