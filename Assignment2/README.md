@@ -19,7 +19,7 @@ complete.
 
 
 ## Performance
-I've tested the 3 methods on my 4 code 2.2GHz Intel i7 8GB RAM laptop
+I've tested the 3 methods on my 4 core 2.2GHz Intel i7 8GB RAM laptop
 with 140MB of files running each of the methods for 10 times. Here are
 the results: 
 
