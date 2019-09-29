@@ -98,11 +98,14 @@ class Mover:
         """check if the folders exist and are populated.
         """
         if os.listdir(self.secondary_directory):
+            assert os.listdir(self.primary_directory) == []
             self.primary_directory, self.secondary_directory = \
                 self.secondary_directory, self.primary_directory
         else:
             if not os.listdir(self.primary_directory):
                 raise MoverException("No files to move")
+            else:
+                assert os.listdir(self.secondary_directory) == []
 
 
 class MoverException(Exception):
