@@ -1,6 +1,7 @@
 # Assignment 2
 
-Foobar is a Python library for dealing with word pluralization.
+Moving files between directories using syncronous, multiprocessing and
+threading methods.
 
 ## Usage
 
